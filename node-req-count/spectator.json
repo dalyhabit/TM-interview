@@ -1,0 +1,6 @@
+{
+  "type": "node",
+  "babel": true,
+  "src": [ "server.js" ],
+  "tests": [ "server.test.js" ]
+}

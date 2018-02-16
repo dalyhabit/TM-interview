@@ -1,0 +1,6 @@
+{
+  "server should return an empty response if not set yet": false,
+  "server should increment a property by 1": true,
+  "server should set a 200s status code on successful increment": false,
+  "server should increment a property by 2": true
+}

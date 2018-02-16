@@ -1,0 +1,6 @@
+{
+  "type": "node",
+  "babel": true,
+  "src": [ "async-word-count.js" ],
+  "tests": [ "async-word-count.test.js" ]
+}

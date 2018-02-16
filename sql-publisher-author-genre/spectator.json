@@ -1,0 +1,6 @@
+{
+  "type": "browser",
+  "babel": true,
+  "src": [ "sql-publisher-author-genre.js" ],
+  "tests": [ "sql-publisher-author-genre.test.js" ]
+}

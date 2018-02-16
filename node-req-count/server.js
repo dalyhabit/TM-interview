@@ -10,14 +10,19 @@ var server = http.createServer(function(request, response) {
 
   if (request.method === 'POST') {
     // YOUR CODE HERE
-    var messages = [];
-    request.on('data', (data) => {
-      messages.push(data);
-    })
+    /*START SOLUTION*/
+    globalCounter[property] = globalCounter[property] || 0;
+    globalCounter[property]++;
+    response.statusCode = 200;
+    response.end();
+    /*END SOLUTION*/
   } else if (request.method === 'GET') {
     // YOUR CODE HERE
-    response.writeHead(200, headers);
-    response.end(JSON.stringify({request});
+    /*START SOLUTION*/
+    var data = JSON.stringify(globalCounter[property]);
+    response.statusCode = 200;
+    response.end(data);
+    /*END SOLUTION*/
   } else {
     response.statusCode = 404;
     response.end();

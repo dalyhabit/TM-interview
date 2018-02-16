@@ -15,17 +15,23 @@ var getWordCount = function(filePath, callback) {
 
 var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
   // YOUR CODE HERE
-  var funk = (filePathOne, filePathTwo, callback) => {
-    var one = getWordCount(filePathOne, callback)
-    if (one !== undefined) {
-      var two = getWordCount(filePathTwo, callback)
-      if (two !== undefined) {
-        var result = one + two
-        callback(result)
-      }
+  /* START SOLUTION */
+  getWordCount(filePathOne, function(err, wordCountOne) {
+    if (err) {
+      callback(err, null);
+      return;
     }
-  };
-  funk(filePathOne, filePathTwo, callback)
+
+    getWordCount(filePathTwo, function(err, wordCountTwo) {
+      if (err) {
+        callback(err, null);
+        return;
+      }
+
+      callback(null, wordCountOne + wordCountTwo);
+    });
+  });
+  /* END SOLUTION */
 };
 
 module.exports = getTotalWordCount;

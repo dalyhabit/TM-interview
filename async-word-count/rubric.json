@@ -1,0 +1,7 @@
+{
+  "getTotalWordCount should eventually invoke the callback passed in": true,
+  "getTotalWordCount should invoke the callback with the combined word count as an argument": true,
+  "getTotalWordCount should invoke the callback with the combined word count as the second argument": false,
+  "getTotalWordCount should invoke the callback with an error in filePathOne as the first argument": false,
+  "getTotalWordCount should invoke the callback with an error in filePathTwo as the first argument": false
+}
